@@ -1,4 +1,4 @@
-package com.example.a5046.presentation
+package com.example.a5046.presentation.dropDown
 
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.setValue
@@ -27,8 +27,14 @@ import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.focus.focusProperties
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.a5046.ui.theme.ForestGreen
+<<<<<<< HEAD
+=======
+import com.example.a5046.ui.theme.LightGreen
+import com.example.a5046.ui.theme.SoftGreen
+>>>>>>> 1c9c9b5569b654af9c6fe9ccab576298db809cb4
 
 
 //class MainActivity : ComponentActivity() {
@@ -62,13 +68,24 @@ fun FormEntry() {
             Text(
                 text = "How long is your average cycle length?",
                 style = MaterialTheme.typography.headlineSmall,
+<<<<<<< HEAD
                 color = ForestGreen
+=======
+                color = SoftGreen,
+                fontWeight = FontWeight.Bold
+>>>>>>> 1c9c9b5569b654af9c6fe9ccab576298db809cb4
             )
             Spacer(modifier = Modifier.height(40.dp))
             Text(
                 text = "This information will help us make more accurate predictions.",
+<<<<<<< HEAD
                 style = MaterialTheme.typography.bodyMedium,
                 color = ForestGreen
+=======
+                style = MaterialTheme.typography.bodyLarge,
+                color = SoftGreen,
+                fontWeight = FontWeight.Bold
+>>>>>>> 1c9c9b5569b654af9c6fe9ccab576298db809cb4
             )
 
             Spacer(modifier = Modifier.height(35.dp)) // Add space between text and dropdown menu
@@ -94,6 +111,7 @@ fun FormEntry() {
                         trailingIcon = {
                             ExposedDropdownMenuDefaults.TrailingIcon(expanded = isExpanded)
                         },
+                        colors = ExposedDropdownMenuDefaults.textFieldColors(SoftGreen)
                     )
                     ExposedDropdownMenu(
                         expanded = isExpanded,
@@ -123,27 +141,47 @@ fun FormEntry() {
         Row(
             modifier = Modifier
                 .align(Alignment.BottomEnd)
-                .padding(18.dp)
+//                .padding(18.dp)
                 .fillMaxWidth(),
             verticalAlignment = Alignment.CenterVertically
         ) {
+<<<<<<< HEAD
             Text(
                 text = "Skip",
                 modifier = Modifier.weight(1f),
                 color = ForestGreen
             )
+=======
+            Button(
+                onClick = { /* Handle Next button click */ },
+                modifier = Modifier
+                    .padding(16.dp)
+                    .height(48.dp)
+                    .width(90.dp),
+                contentPadding = PaddingValues(12.dp),
+                colors = ButtonDefaults.buttonColors(containerColor = SoftGreen)
+            ) {
+                Text(
+                    text = "Skip",
+                )
+            }
+>>>>>>> 1c9c9b5569b654af9c6fe9ccab576298db809cb4
 
             Button(
                 onClick = { /* Handle Next button click */ },
                 modifier = Modifier
                     .padding(16.dp)
                     .height(48.dp)
-                    .width(120.dp),
-                contentPadding = PaddingValues(12.dp)
+                    .width(90.dp),
+                contentPadding = PaddingValues(12.dp),
+                colors = ButtonDefaults.buttonColors(containerColor = ForestGreen)
             ) {
                 Text(
                     text = "Next",
+<<<<<<< HEAD
                     color = ForestGreen
+=======
+>>>>>>> 1c9c9b5569b654af9c6fe9ccab576298db809cb4
                 )
             }
         }

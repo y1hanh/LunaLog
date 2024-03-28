@@ -53,12 +53,13 @@ fun SignUpScreen() {
     Scaffold(
         topBar = {
             TopAppBar(
-                title = { Text(text = "Sign Up",
-                    style = MaterialTheme.typography.headlineMedium.copy(fontWeight = FontWeight.Bold),
+                title = { Text(text = "Sign Up  \uD83C\uDF19",
+                    modifier =
+                    Modifier.padding(start = 16.dp),
                     color = ForestGreen,
-                    fontSize = 20.sp, // Set the font size
-                    fontWeight = FontWeight.Bold )// Set the text bold)
-                },
+                    fontSize = 20.sp,
+                    fontWeight = FontWeight.Bold
+                )}
             )
         }
     ) { paddingValues ->

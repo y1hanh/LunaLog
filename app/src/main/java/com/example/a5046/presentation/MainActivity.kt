@@ -40,10 +40,16 @@ import androidx.navigation.compose.rememberNavController
 import com.example.a5046.R
 import com.example.a5046.presentation.BottomNavigationBar.BottomNavigationBar
 import com.example.a5046.presentation.diary.DiaryScreen
+<<<<<<< HEAD
 //import com.example.a5046.presentation.settings.SettingsScreen
 import com.example.a5046.presentation.datapicker.DataPickerScreen
 import com.example.a5046.presentation.period.CardWithImage
 import com.example.a5046.presentation.period.MyScreen
+=======
+import com.example.a5046.presentation.dropDown.FormEntry
+import com.example.a5046.presentation.signup.SignUpScreen
+import com.example.a5046.presentation.settings.SettingsScreen
+>>>>>>> 1c9c9b5569b654af9c6fe9ccab576298db809cb4
 import com.example.a5046.ui.theme.ForestGreen
 import com.example.a5046.ui.theme.LightGreen
 import com.example.a5046.ui.theme.SoftGreen
@@ -68,8 +74,12 @@ class MainActivity : ComponentActivity() {
 //                    MainPageScreen()
 //                    BottomNavigationBar()
 //                    SignUpScreen()
+<<<<<<< HEAD
 //                    DataPickerScreen()
                     MyScreen()
+=======
+                    FormEntry()
+>>>>>>> 1c9c9b5569b654af9c6fe9ccab576298db809cb4
                 }
             }
         }
@@ -88,12 +98,13 @@ fun SignInScreen() {
     Scaffold(
         topBar = {
             TopAppBar(
-                title = { Text(text = "Luna Log",
-                    style = MaterialTheme.typography.headlineMedium.copy(fontWeight = FontWeight.Bold),
+                title = { Text(text = "Luna Log  \uD83C\uDF19",
+                    modifier =
+                    Modifier.padding(start = 16.dp),
                     color = ForestGreen,
-                    fontSize = 20.sp, // Set the font size
-                    fontWeight = FontWeight.Bold )// Set the text bold)
-                        },
+                    fontSize = 20.sp,
+                    fontWeight = FontWeight.Bold
+                ) },
             )
         }
     ) { paddingValues ->
