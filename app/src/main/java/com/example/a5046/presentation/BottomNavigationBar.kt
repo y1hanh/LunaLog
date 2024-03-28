@@ -29,6 +29,7 @@ import com.example.a5046.presentation.Routes
 import com.example.a5046.presentation.SignInScreen
 import com.example.a5046.presentation.main.mainpage.MainPageScreen
 import com.example.a5046.presentation.report.ReportScreen
+import com.example.a5046.presentation.settings.SettingsScreen
 
 
 @Composable
@@ -83,7 +84,7 @@ fun BottomNavigationBar() {
                 MainPageScreen(navController)
             }
             composable(Routes.About.value) {
-                ReportScreen(navController)
+                SettingsScreen(navController)
             }
         }
     }

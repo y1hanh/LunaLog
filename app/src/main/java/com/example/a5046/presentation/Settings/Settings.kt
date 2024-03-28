@@ -1,8 +1,5 @@
-package com.example.a5046.presentation.Settings
+package com.example.a5046.presentation.settings
 
-import android.os.Bundle
-import androidx.activity.ComponentActivity
-import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -11,8 +8,10 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Button
-import androidx.compose.material3.Card
+import androidx.compose.material3.ButtonDefaults
+import androidx.compose.material.Card
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
@@ -26,36 +25,23 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.example.Settings.ui.theme.SettingScreenTheme
+import androidx.navigation.NavHostController
+import com.example.a5046.ui.theme.*
 
 
-class MainActivity : ComponentActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContent {
-            SettingsTheme {
-                // A surface container using the 'background' color from the theme
-                Surface(
-                    modifier = Modifier.fillMaxSize(),
-                    color = MaterialTheme.colorScheme.background
-                ) {
-                    UserSettingsPage()
-                }
-            }
-        }
-    }
-}
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun UserSettingsPage() {
+fun SettingsScreen(navController: NavHostController) {
     Scaffold(
         topBar = {
             TopAppBar(
                 title = {
                     Text(
-                        "Settings ",
-                        modifier = Modifier.padding(start = 16.dp),
+                        "Settings  \uD83C\uDF19",
+                        modifier =
+                        Modifier.padding(start = 16.dp),
+                        color = ForestGreen,
                         fontSize = 20.sp,
                         fontWeight = FontWeight.Bold
                     )
@@ -63,10 +49,11 @@ fun UserSettingsPage() {
             )
         }
     ) {
+        PaddingValues ->
         Column(
             modifier = Modifier
                 .fillMaxSize()
-                .padding(horizontal = 16.dp)
+                .padding(horizontal = 16.dp),
         ) {
             Spacer(modifier = Modifier.height(120.dp))
             SettingCard(title = "Check your profile", buttonText = "View")
@@ -81,7 +68,8 @@ fun SettingCard(title: String, buttonText: String? = null, showIndicator: Boolea
     Card(
         modifier = Modifier
             .padding(vertical = 8.dp)
-            .fillMaxWidth()
+            .fillMaxWidth(),
+        backgroundColor = LightGreen
     ) {
         Column(
             modifier = Modifier.padding(16.dp)
@@ -93,26 +81,17 @@ fun SettingCard(title: String, buttonText: String? = null, showIndicator: Boolea
             ) {
                 Text(
                     text = title,
-                    style = MaterialTheme.typography.titleMedium
+                    color = ForestGreen,
+                    style = MaterialTheme.typography.bodyMedium,
                 )
                 buttonText?.let {
-                    Button(
-                        onClick = { /* Handle button click */ }
-                    ) {
-                        Text(text = it)
+                    Button(onClick = { }, colors = ButtonDefaults.buttonColors(containerColor = SoftGreen)) {
+                        Text(text = it, style =
+                        MaterialTheme.typography.bodyLarge)
                     }
                 }
             }
 
         }
-    }
-}
-
-
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    SettingsTheme {
-        UserSettingsPage()
     }
 }

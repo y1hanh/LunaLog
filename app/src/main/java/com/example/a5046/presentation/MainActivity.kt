@@ -37,7 +37,9 @@ import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
 import com.example.a5046.R
+import com.example.a5046.presentation.BottomNavigationBar.BottomNavigationBar
 import com.example.a5046.presentation.diary.DiaryScreen
+import com.example.a5046.presentation.settings.SettingsScreen
 import com.example.a5046.ui.theme.ForestGreen
 import com.example.a5046.ui.theme.LightGreen
 import com.example.a5046.ui.theme.SoftGreen
@@ -54,11 +56,12 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
+//                    SettingsScreen()
 //                    SignInScreen()
-                    DiaryScreen()
+//                    DiaryScreen()
 //                    ReportScreen()
 //                    MainPageScreen()
-//                    BottomNavigationBar()
+                    BottomNavigationBar()
 //                    SignUpScreen()
                 }
             }

@@ -15,7 +15,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import com.example.newcalendar.ui.theme.NewCalendarTheme
+//import com.example.newcalendar.ui.theme.NewCalendarTheme
 import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.border
@@ -48,28 +48,29 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
+import com.example.a5046.R
 
 
-class MainActivity : ComponentActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContent {
-            NewCalendarTheme {
-
-
-// A surface container using the 'background' color from the theme
-                Surface(
-                    modifier = Modifier.fillMaxSize(),
-                    color = MaterialTheme.colorScheme.onPrimary
-                ) {
-                    MyScreen()
-
-
-                }
-            }
-        }
-    }
-}
+//class MainActivity : ComponentActivity() {
+//    override fun onCreate(savedInstanceState: Bundle?) {
+//        super.onCreate(savedInstanceState)
+//        setContent {
+//            NewCalendarTheme {
+//
+//
+//// A surface container using the 'background' color from the theme
+//                Surface(
+//                    modifier = Modifier.fillMaxSize(),
+//                    color = MaterialTheme.colorScheme.onPrimary
+//                ) {
+//                    MyScreen()
+//
+//
+//                }
+//            }
+//        }
+//    }
+//}
 @Composable
 fun CardWithImage(imageResId: Int, title: String, content: String) {
     Card(
@@ -117,7 +118,7 @@ fun MyScreen() {
             verticalArrangement = Arrangement.spacedBy(16.dp)
         ) {
             CardWithImage(
-                imageResId = R.drawable.calender, // Replace 'your_image' with the resource ID of your image
+                imageResId = R.drawable.diary_img, // Replace 'your_image' with the resource ID of your image
                 title = "Title 1",
                 content = "Content for Card 1"
             )
