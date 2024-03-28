@@ -39,6 +39,8 @@ import androidx.navigation.compose.rememberNavController
 import com.example.a5046.R
 import com.example.a5046.presentation.BottomNavigationBar.BottomNavigationBar
 import com.example.a5046.presentation.diary.DiaryScreen
+import com.example.a5046.presentation.dropDown.FormEntry
+import com.example.a5046.presentation.signup.SignUpScreen
 import com.example.a5046.presentation.settings.SettingsScreen
 import com.example.a5046.ui.theme.ForestGreen
 import com.example.a5046.ui.theme.LightGreen
@@ -61,8 +63,9 @@ class MainActivity : ComponentActivity() {
 //                    DiaryScreen()
 //                    ReportScreen()
 //                    MainPageScreen()
-                    BottomNavigationBar()
+//                    BottomNavigationBar()
 //                    SignUpScreen()
+                    FormEntry()
                 }
             }
         }
@@ -81,12 +84,13 @@ fun SignInScreen() {
     Scaffold(
         topBar = {
             TopAppBar(
-                title = { Text(text = "Luna Log",
-                    style = MaterialTheme.typography.headlineMedium.copy(fontWeight = FontWeight.Bold),
+                title = { Text(text = "Luna Log  \uD83C\uDF19",
+                    modifier =
+                    Modifier.padding(start = 16.dp),
                     color = ForestGreen,
-                    fontSize = 20.sp, // Set the font size
-                    fontWeight = FontWeight.Bold )// Set the text bold)
-                        },
+                    fontSize = 20.sp,
+                    fontWeight = FontWeight.Bold
+                ) },
             )
         }
     ) { paddingValues ->
