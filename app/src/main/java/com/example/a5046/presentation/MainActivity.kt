@@ -4,6 +4,7 @@ import android.os.Bundle
 import androidx.compose.foundation.layout.*
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.MaterialTheme
@@ -29,18 +30,18 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
-import com.example.a5046.presentation.util.Screen
-import com.example.a5046.presentation.report.ReportScreen
-import com.example.a5046.presentation.main.mainpage.MainPageScreen
-import com.example.a5046.presentation.BottomNavigationBar.BottomNavigationBar
+import com.example.a5046.R
+import com.example.a5046.presentation.diary.DiaryScreen
 import com.example.a5046.ui.theme.ForestGreen
 import com.example.a5046.ui.theme.LightGreen
 import com.example.a5046.ui.theme.SoftGreen
+
 
 
 class MainActivity : ComponentActivity() {
@@ -54,9 +55,11 @@ class MainActivity : ComponentActivity() {
                     color = MaterialTheme.colorScheme.background
                 ) {
 //                    SignInScreen()
+                    DiaryScreen()
 //                    ReportScreen()
 //                    MainPageScreen()
-                    BottomNavigationBar()
+//                    BottomNavigationBar()
+//                    SignUpScreen()
                 }
             }
         }
@@ -143,6 +146,11 @@ fun SignInScreen() {
                         Text("Log in", style =
                         MaterialTheme.typography.bodyLarge)
                     }
+                }
+                Row{
+                    Image(
+                        painter = painterResource(id = R.drawable.google_login),
+                        contentDescription = "Google")
                 }
                 Spacer(modifier = Modifier.size(20.dp))
                 Row{
