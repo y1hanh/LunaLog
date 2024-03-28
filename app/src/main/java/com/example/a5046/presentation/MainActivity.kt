@@ -4,6 +4,7 @@ import android.os.Bundle
 import androidx.compose.foundation.layout.*
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.annotation.RequiresApi
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -39,7 +40,10 @@ import androidx.navigation.compose.rememberNavController
 import com.example.a5046.R
 import com.example.a5046.presentation.BottomNavigationBar.BottomNavigationBar
 import com.example.a5046.presentation.diary.DiaryScreen
-import com.example.a5046.presentation.settings.SettingsScreen
+//import com.example.a5046.presentation.settings.SettingsScreen
+import com.example.a5046.presentation.datapicker.DataPickerScreen
+import com.example.a5046.presentation.period.CardWithImage
+import com.example.a5046.presentation.period.MyScreen
 import com.example.a5046.ui.theme.ForestGreen
 import com.example.a5046.ui.theme.LightGreen
 import com.example.a5046.ui.theme.SoftGreen
@@ -47,6 +51,7 @@ import com.example.a5046.ui.theme.SoftGreen
 
 
 class MainActivity : ComponentActivity() {
+    @RequiresApi(64)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
@@ -61,8 +66,10 @@ class MainActivity : ComponentActivity() {
 //                    DiaryScreen()
 //                    ReportScreen()
 //                    MainPageScreen()
-                    BottomNavigationBar()
+//                    BottomNavigationBar()
 //                    SignUpScreen()
+//                    DataPickerScreen()
+                    MyScreen()
                 }
             }
         }

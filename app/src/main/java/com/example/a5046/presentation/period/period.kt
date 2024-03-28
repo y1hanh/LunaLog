@@ -1,8 +1,5 @@
 package com.example.a5046.presentation.period
 
-
-
-
 import androidx.compose.material3.CardDefaults
 import android.annotation.SuppressLint
 import android.os.Bundle
@@ -49,6 +46,9 @@ import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import com.example.a5046.R
+import com.example.a5046.ui.theme.ForestGreen
+import com.example.a5046.ui.theme.LightGreen
+import com.example.a5046.ui.theme.SoftGreen
 
 
 //class MainActivity : ComponentActivity() {
@@ -71,6 +71,8 @@ import com.example.a5046.R
 //        }
 //    }
 //}
+
+
 @Composable
 fun CardWithImage(imageResId: Int, title: String, content: String) {
     Card(
@@ -86,8 +88,9 @@ fun CardWithImage(imageResId: Int, title: String, content: String) {
                 painter = painterResource(id = imageResId),
                 contentDescription = title,
                 modifier = Modifier
+//                    .size(100.dp)
                     .fillMaxWidth()
-                    .height(300.dp), // Set the height of the image
+                    .height(420.dp), // Set the height of the image
                 contentScale = ContentScale.Fit // Fill the width of the image
             )
         }
@@ -105,12 +108,14 @@ fun MyScreen() {
                         "Period",
                         modifier = Modifier.padding(start = 16.dp),
                         fontSize = 20.sp,
-                        fontWeight = FontWeight.Bold
+                        fontWeight = FontWeight.Bold,
+                        color = ForestGreen
                     )
                 }
             )
         }
     ) {
+            PaddingValues ->
         Column(
             modifier = Modifier
                 .padding(top = 80.dp)
@@ -118,11 +123,31 @@ fun MyScreen() {
             verticalArrangement = Arrangement.spacedBy(16.dp)
         ) {
             CardWithImage(
-                imageResId = R.drawable.diary_img, // Replace 'your_image' with the resource ID of your image
+                imageResId = R.drawable.calender, // Replace 'your_image' with the resource ID of your image
                 title = "Title 1",
                 content = "Content for Card 1"
             )
         }
+        Column(
+            modifier = Modifier
+                .padding(top = 80.dp)
+                .fillMaxSize()
+        ){
+            Spacer(modifier = Modifier.height(430.dp))
+            Row {
+                Spacer(modifier = Modifier.width(20.dp))
+                Text(
+                    text = "● Period",
+                    color = ForestGreen)
+                Spacer(modifier = Modifier.width(35.dp))
+                Text(text = "● Ovulation",
+                     color = ForestGreen)
+                Spacer(modifier = Modifier.width(35.dp))
+                Text(
+                    text = "● Expected Period",
+                    color = ForestGreen)
+            }
+        }
+
     }
 }
-

@@ -28,6 +28,7 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.focus.focusProperties
 import androidx.compose.ui.tooling.preview.Preview
+import com.example.a5046.ui.theme.ForestGreen
 
 
 //class MainActivity : ComponentActivity() {
@@ -60,12 +61,14 @@ fun FormEntry() {
         ) {
             Text(
                 text = "How long is your average cycle length?",
-                style = MaterialTheme.typography.headlineSmall
+                style = MaterialTheme.typography.headlineSmall,
+                color = ForestGreen
             )
             Spacer(modifier = Modifier.height(40.dp))
             Text(
                 text = "This information will help us make more accurate predictions.",
-                style = MaterialTheme.typography.bodyMedium
+                style = MaterialTheme.typography.bodyMedium,
+                color = ForestGreen
             )
 
             Spacer(modifier = Modifier.height(35.dp)) // Add space between text and dropdown menu
@@ -127,6 +130,7 @@ fun FormEntry() {
             Text(
                 text = "Skip",
                 modifier = Modifier.weight(1f),
+                color = ForestGreen
             )
 
             Button(
@@ -138,7 +142,8 @@ fun FormEntry() {
                 contentPadding = PaddingValues(12.dp)
             ) {
                 Text(
-                    text = "Next"
+                    text = "Next",
+                    color = ForestGreen
                 )
             }
         }

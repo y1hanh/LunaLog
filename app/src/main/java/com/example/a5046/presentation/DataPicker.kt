@@ -1,4 +1,4 @@
-package com.example.a5046.presentation
+package com.example.a5046.presentation.datapicker
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -35,6 +35,8 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
+import com.example.a5046.ui.theme.ForestGreen
+import com.example.a5046.ui.theme.SoftGreen
 import java.text.SimpleDateFormat
 import java.time.Instant
 import java.util.Calendar
@@ -63,7 +65,7 @@ import java.util.Locale
 @RequiresApi(0)
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun DisplayDatePicker() {
+fun DataPickerScreen() {
     val calendar = Calendar.getInstance()
     calendar.set(2024, 0, 1) // month (0) is January
     val datePickerState = rememberDatePickerState(
@@ -79,12 +81,14 @@ fun DisplayDatePicker() {
     Column(modifier = Modifier.padding(80.dp)) {
         Text(
             text = "When did your period last start?",
-            style = MaterialTheme.typography.headlineSmall
+            style = MaterialTheme.typography.headlineSmall,
+            color = ForestGreen
         )
         Spacer(modifier = Modifier.height(40.dp))
         Text(
             text = "Record your last period or skip if you do not know.",
-            style = MaterialTheme.typography.bodyMedium
+            style = MaterialTheme.typography.bodyMedium,
+            color = ForestGreen
         )
         Spacer(modifier = Modifier.height(35.dp))
 
@@ -123,7 +127,8 @@ fun DisplayDatePicker() {
                 .padding(16.dp)
                 .height(48.dp)
                 .width(100.dp),
-            contentPadding = PaddingValues(12.dp)
+            contentPadding = PaddingValues(12.dp),
+            colors = ButtonDefaults.buttonColors(containerColor = SoftGreen)
         ) {
             Text(text = "Date")
         }
@@ -140,6 +145,7 @@ fun DisplayDatePicker() {
             Text(
                 text = "Skip",
                 modifier = Modifier.weight(1f),
+                color = ForestGreen
             )
 
             Button(
@@ -148,7 +154,8 @@ fun DisplayDatePicker() {
                     .padding(16.dp)
                     .height(48.dp)
                     .width(120.dp),
-                contentPadding = PaddingValues(12.dp)
+                contentPadding = PaddingValues(12.dp),
+                colors = ButtonDefaults.buttonColors(containerColor = SoftGreen)
             ) {
                 Text(
                     text = "Next"
@@ -158,9 +165,9 @@ fun DisplayDatePicker() {
     }
 }
 
-@Preview(showBackground = true)
-@Composable
-fun DisplayDatePickerPreview()
-{
-    DisplayDatePicker()
-}
+//@Preview(showBackground = true)
+//@Composable
+//fun DisplayDatePickerPreview()
+//{
+//    DisplayDatePicker()
+//}

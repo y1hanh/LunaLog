@@ -57,8 +57,8 @@ fun SettingsScreen(navController: NavHostController) {
         ) {
             Spacer(modifier = Modifier.height(120.dp))
             SettingCard(title = "Check your profile", buttonText = "View")
-            SettingCard(title = "Notification                                                     ▶", showIndicator = true)
-            SettingCard(title = "Background color                                           ▶", showIndicator = true)
+            SettingCard(title = "Reminder                                                                       ▶", showIndicator = true)
+            SettingCard(title = "Theme                                                                            ▶", showIndicator = true)
         }
     }
 }
