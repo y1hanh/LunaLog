@@ -13,7 +13,6 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
 import com.example.a5046.presentation.util.Screen
@@ -32,12 +31,8 @@ fun MainPageScreen(
             TopAppBar(
                 title = {
                     Text(
-                        text = "Luna Log  \uD83C\uDF19",
-                        modifier =
-                        Modifier.padding(start = 16.dp),
-                        color = ForestGreen,
-                        fontSize = 20.sp,
-                        fontWeight = FontWeight.Bold
+                        text = "Luna Log",
+                        style = MaterialTheme.typography.h5.copy(fontWeight = FontWeight.Bold)
                     )
                 },
                 backgroundColor = MaterialTheme.colors.background,

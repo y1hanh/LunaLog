@@ -19,6 +19,7 @@ import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import com.example.formlab.ui.theme.FormLabTheme
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.unit.dp
@@ -37,14 +38,14 @@ import com.example.a5046.ui.theme.SoftGreen
 >>>>>>> 1c9c9b5569b654af9c6fe9ccab576298db809cb4
 
 
-//class MainActivity : ComponentActivity() {
-//    override fun onCreate(savedInstanceState: Bundle?) {
-//        super.onCreate(savedInstanceState)
-//        setContent {
-//            FormEntry()
-//        }
-//    }
-//}
+class MainActivity : ComponentActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContent {
+            FormEntry()
+        }
+    }
+}
 
 
 @OptIn(ExperimentalMaterial3Api::class)

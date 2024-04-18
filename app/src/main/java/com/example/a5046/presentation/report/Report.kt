@@ -72,10 +72,10 @@ import com.example.a5046.ui.theme.SoftGreen
 fun ReportScreen(navController: NavHostController) {
     Scaffold(
         topBar = { TopAppBar(title = { Text("Dashboard  \uD83C\uDF19", modifier =
-        Modifier.padding(start = 16.dp),
-            color = ForestGreen,
-            fontSize = 20.sp,
-            fontWeight = FontWeight.Bold
+        Modifier.padding(start = 16.dp), // Add padding to the title
+            color = ForestGreen, // Set the text color
+            fontSize = 20.sp, // Set the font size
+            fontWeight = FontWeight.Bold // Set the text bold
         ) }) }
     ) {
 
